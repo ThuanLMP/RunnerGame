@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraMovement : MonoBehaviour
 {
     private Transform cameraTransform;
-
+    public float speedRun;
     void Start()
     {
         cameraTransform = Camera.main.transform;
@@ -13,6 +13,6 @@ public class CameraMovement : MonoBehaviour
 
     void LateUpdate()
     {
-        cameraTransform.position += new Vector3(.01f, 0);
+        cameraTransform.position += new Vector3(speedRun, 0);
     }
 }
