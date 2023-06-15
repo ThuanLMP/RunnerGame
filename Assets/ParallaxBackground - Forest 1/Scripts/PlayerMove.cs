@@ -19,12 +19,26 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float direcionY = Input.GetAxisRaw("Vertical");
-        playerDirection = new Vector2(0, direcionY).normalized;
+        // float direcionY = Input.GetAxisRaw("Vertical");
+        //playerDirection = new Vector2(0, 1).normalized;
     }
 
     void FixedUpdate()
     {
+        //rb.velocity = new Vector2(0, playerDirection.y * playerSpeed);
+    }
+    public float moveSpeed = 5f;
+
+    public void MoveUp1()
+    {
+        playerDirection = new Vector2(0, 1).normalized;
+        rb.velocity = new Vector2(0, playerDirection.y * playerSpeed);
+        // transform.Translate(Vector3.up * moveSpeed * Time.deltaTime);
+    }
+
+    public void MoveDown1()
+    {
+        playerDirection = new Vector2(0, -1).normalized;
         rb.velocity = new Vector2(0, playerDirection.y * playerSpeed);
     }
 }
