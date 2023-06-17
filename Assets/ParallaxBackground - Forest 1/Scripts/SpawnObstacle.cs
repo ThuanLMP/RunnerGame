@@ -9,6 +9,8 @@ public class SpawnObstacle : MonoBehaviour
     public float minY;
     public float maxX;
     public float minX;
+
+    public List<float> listPositionY = new List<float>() { 1f, 3.2f, 5.5f };
     public float timeBetweenSpawn;
     private float spawnTime;
 
@@ -29,9 +31,9 @@ public class SpawnObstacle : MonoBehaviour
     void Spawn()
     {
         float randomX = Random.Range(minX, maxX);
-        float randomY = Random.Range(minY, maxY);
+        int randomYIndex = Random.Range(0, listPositionY.Count);
         int randomIndex = Random.Range(0, listObstacle.Count);
         GameObject obstacle = listObstacle[randomIndex];
-        Instantiate(obstacle, transform.position + new Vector3(randomX, randomY, 0f), transform.rotation);
+        Instantiate(obstacle, transform.position + new Vector3(randomX, listPositionY[randomYIndex], 0f), transform.rotation);
     }
 }
