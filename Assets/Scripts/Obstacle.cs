@@ -9,7 +9,8 @@ public class Obstacle : MonoBehaviour
         Destroy(this.gameObject);
     }
     if(collision.tag == "Player"){
-        Debug.Log("Game Over");
+         LivesController lives = GameObject.FindObjectOfType<LivesController>();
+         lives.DeleteHeart();
     }
    }
 
