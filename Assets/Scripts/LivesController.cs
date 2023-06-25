@@ -47,6 +47,6 @@ public class LivesController : MonoBehaviour
         {
             numberOfHearts = numberOfHearts + 1;
         }
-        listHeartObjects[numberOfHearts].SetActive(false);
+        listHeartObjects[numberOfHearts].SetActive(true);
     }
 }
