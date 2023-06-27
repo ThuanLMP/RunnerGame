@@ -42,11 +42,13 @@ public class LivesController : MonoBehaviour
         listHeartObjects[numberOfHearts].SetActive(false);
     }
     public void AddHeart()
-    {
-        if (numberOfHearts < 3)
-        {
-            numberOfHearts = numberOfHearts + 1;
-        }
-        listHeartObjects[numberOfHearts].SetActive(true);
+    {   
+         if (numberOfHearts < 3)
+         {
+             numberOfHearts = numberOfHearts + 1;
+         }
+         
+         listHeartObjects[numberOfHearts-1].SetActive(true);
+        
     }
 }
