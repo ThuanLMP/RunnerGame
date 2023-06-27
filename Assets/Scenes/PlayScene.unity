@@ -311,7 +311,7 @@ MonoBehaviour:
   - 3
   - 5
   - 7
-  timeBetweenSpawn: 5
+  timeBetweenSpawn: 20
 --- !u!1 &141346559
 GameObject:
   m_ObjectHideFlags: 0
@@ -2201,7 +2201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1be97b0777ecbdb4c9094d6e21d58177, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedRun: 0.05
+  speedRun: 0.04
 --- !u!4 &1966845915
 Transform:
   m_ObjectHideFlags: 0

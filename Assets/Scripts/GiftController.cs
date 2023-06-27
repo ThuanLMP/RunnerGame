@@ -14,6 +14,7 @@ public class GiftController : MonoBehaviour
         {
             LivesController lives = GameObject.FindObjectOfType<LivesController>();
             lives.AddHeart();
+            Destroy(this.gameObject);
         }
     }
 }

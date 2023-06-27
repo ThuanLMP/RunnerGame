@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Border
   - Heart
+  - Explosion
   layers:
   - Default
   - TransparentFX
