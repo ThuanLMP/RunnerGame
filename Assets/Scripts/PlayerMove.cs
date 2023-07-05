@@ -6,6 +6,7 @@ public class PlayerMove : MonoBehaviour
 {
     // Start is called before the first frame update
     public float playerSpeed;
+    public float moveSpeed = 5f;
     private Rigidbody2D rb;
     private Vector2 playerDirection;
     private Animator anim;
@@ -27,18 +28,19 @@ public class PlayerMove : MonoBehaviour
     {
         //rb.velocity = new Vector2(0, playerDirection.y * playerSpeed);
     }
-    public float moveSpeed = 5f;
 
     public void MoveUp1()
     {
         playerDirection = new Vector2(0, 1).normalized;
         rb.velocity = new Vector2(0, playerDirection.y * playerSpeed);
-        // transform.Translate(Vector3.up * moveSpeed * Time.deltaTime);
+        transform.Translate(Vector3.up * moveSpeed * Time.deltaTime);
     }
+
 
     public void MoveDown1()
     {
         playerDirection = new Vector2(0, -1).normalized;
         rb.velocity = new Vector2(0, playerDirection.y * playerSpeed);
+        transform.Translate(Vector3.down * moveSpeed * Time.deltaTime);
     }
 }
