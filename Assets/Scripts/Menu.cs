@@ -5,6 +5,7 @@ public class Menu : MonoBehaviour
 {
     public void StartGame()
     {
+        PlayerPrefs.SetInt("score",0);
         SceneManager.LoadScene(1);
     }
     public void QuitGame()

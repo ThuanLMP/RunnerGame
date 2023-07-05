@@ -37,6 +37,7 @@ public class Score : MonoBehaviour
     public void AddScore(int points)
     {
         score += points;
+        PlayerPrefs.SetInt("score",score);
         UpdateScoreUI();
     }
 
